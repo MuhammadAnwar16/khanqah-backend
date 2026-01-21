@@ -12,7 +12,9 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG", default=False, cast=bool)
 
 # Comma-separated in env: "example.com,api.example.com"
-ALLOWED_HOSTS = [h.strip() for h in config("ALLOWED_HOSTS", default="").split(",") if h.strip()]
+# Vercel deployments use .vercel.app domain, so include it by default
+default_hosts = ".vercel.app,localhost,127.0.0.1"
+ALLOWED_HOSTS = [h.strip() for h in config("ALLOWED_HOSTS", default=default_hosts).split(",") if h.strip()]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
