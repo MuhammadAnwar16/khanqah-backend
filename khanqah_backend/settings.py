@@ -312,9 +312,9 @@ else:
     CSP_FRAME_ANCESTORS = "'self' " + " ".join(frontend_origins)
 
 # Logging
-import os
-LOGS_DIR = BASE_DIR / 'logs'
-LOGS_DIR.mkdir(exist_ok=True)  # Create logs directory if it doesn't exist
+#import os
+#LOGS_DIR = BASE_DIR / 'logs'
+#LOGS_DIR.mkdir(exist_ok=True)  # Create logs directory if it doesn't exist
 
 # LOGGING CONFIGURATION
 # In production (Vercel), we cannot write to files.
