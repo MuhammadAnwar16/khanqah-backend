@@ -17,6 +17,7 @@ default_hosts = ".vercel.app,localhost,127.0.0.1"
 ALLOWED_HOSTS = [h.strip() for h in config("ALLOWED_HOSTS", default=default_hosts).split(",") if h.strip()]
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
